@@ -8,7 +8,9 @@ $(document).ready(function() {
   		$(this).addClass('active');
   		var choise = $(this).data("option");
   		$('.jumbotron').css({
-  			'background':'url(' + 'images/' +  choise + '.png ) no-repeat top',
+  			'background':'url(' + 'images/' +  choise + '.png )',
+  			'background-position': '50% 50%',
+			'background-repeat': 'no-repeat'
   		});
   	});
 });
