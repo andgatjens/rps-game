@@ -1,10 +1,53 @@
+@mixin animation {
+  -webkit-transition: all 300ms linear;
+     -moz-transition: all 300ms linear;
+      -ms-transition: all 300ms linear;
+       -o-transition: all 300ms linear;
+          transition: all 300ms linear;
+}
+
 /* Space out content a bit */
 body {
   padding-top: 20px;
   padding-bottom: 20px;
-}
 
-/* Make the masthead heading the same height as the navigation */
+  .score {
+    width: 70%;
+    height: 55px;
+    line-height: 55px;
+    border-radius: 6px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    display: none;
+  }
+
+  h4 {
+    &.options-title {
+      margin-bottom: 20px;
+    }
+  }
+
+  p {
+    margin-bottom: 20px;
+  }
+
+  form {
+    width: 60px;
+    display: block;
+    text-align: left;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  input[type=text] {
+    padding: 0 5px;
+    width: 100px;
+  }
+
+  input[type=radio] {
+    margin-right: 5px;
+  }
+}
 
 h2.text-muted {
   margin-top: 0;
@@ -14,8 +57,11 @@ h2.text-muted {
   color: #999;
 }
 
-/* Main marketing message and sign up button */
-.jumbotron .btn {
-  font-size: 21px;
-  padding: 14px 24px;
+.btn {
+  @include animation;
+  &.action {
+    background: #B51F14;
+    border: #620D07;
+    border-radius: 17px;
+  }
 }
